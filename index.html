@@ -1,0 +1,33 @@
+<!--
+Create a 5 x 5 grid of blue blocks. When a block is clicked it turns red. Its adjacent block turns green.
+If a red block is on the end of a row, the adjacent green block is on the line below on the first column, 
+et cetera. When another block is clicked, the previous red/green blocks go back to blue. There will only
+ever be one red and one green block on the screen, the rest are always blue.
+Only worry about Chrome. 
+------ 
+I solved this without javascript by making use of infinite transitions to preserve state. Kind of a fun hack
+ :) The only edge case is the bottom right block and getting the adjacent green block to appear on the top 
+left block. Right now it only shows up temporarily (on :active). I think there may be a way to register a 
+keyframe to get it to stay. 
+-->
+
+<html>
+  <head>
+   <link rel="stylesheet" href="/style.css">
+  </head>
+
+  <body>
+   <section class="section"><h1>Etch A Sketch</h1>
+    <button class="small">Small</button>
+    <button class="medium">Medium</button>
+    <button class="black">Black</button>
+     <button class="green">Green</button>
+    <button class="rainbow">Rainbow</button>
+    <button class="erase">Erase</button>
+    <button class="reset">Reset</button>
+    
+  </section>
+    <section id="wrapper"></section>
+    <script src="/script.js"></script>
+  </body>
+</html>
